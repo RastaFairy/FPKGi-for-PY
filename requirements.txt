@@ -1,0 +1,9 @@
+# Required for cover images
+Pillow>=9.0.0
+
+# Recommended for faster HTTP and Cloudflare session cookies
+requests>=2.28.0
+
+# Required for OrbisPatches JS rendering (Cloudflare bypass)
+# After install, also run: python -m playwright install chromium
+playwright>=1.40.0
