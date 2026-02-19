@@ -1,20 +1,49 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-FPKGi Manager v5.11
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-• Dual JSON format support (DATA dict and packages list)
-• OrbisPatches scraper - Playwright JS renderer (Cloudflare bypass)
-• PKG availability check (HTTP HEAD)
-• Parallel non-blocking downloads  → ./descargas/{CUSA}/
-• Per-session configurable download path
-• Multilingual: English built-in, extras from lang/*.json
-• Parallel icon prefetch with progress bar
+╔════════════════════════════════════════════════════════════════╗
+║           FPKGi Manager - Python Edition v5.11                ║
+║                                                                ║
+║  Original concept by Bucanero (PSP Homebrew)                  ║
+║  PS4/PS5 port by ItsJokerZz                                   ║
+║  Python adaptation and evolution by RastaFairy                ║
+║                                                                ║
+║  Licensed under MIT License                                   ║
+║  Repository: github.com/RastaFairy/FPKGi-for-PY               ║
+╚════════════════════════════════════════════════════════════════╝
 
-Requires: pip install Pillow requests playwright
-          python -m playwright install chromium
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━━━━━��━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🎮 PS4 FPKG game manager with OrbisPatches integration
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+FEATURES:
+  • Dual JSON format support (FPKGi dict & PS4PKGInstaller list)
+  • OrbisPatches integration with Playwright JS rendering
+  • Cloudflare bypass via Chromium headless
+  • PKG availability verification (HTTP HEAD)
+  • Parallel non-blocking downloads (up to 8 simultaneous)
+  • Per-session configurable download paths
+  • Multilingual UI (9 languages from lang/*.json)
+  • Parallel icon prefetch with persistent cache
+  • Real-time patch notes translation (Claude API)
+  • Cross-platform: Windows, Linux, macOS
+
+REQUIREMENTS:
+  pip install Pillow requests playwright
+  python -m playwright install chromium
+
+OPTIONAL:
+  export ANTHROPIC_API_KEY="sk-ant-..." (for patch note translation)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 """
+
+__title__       = "FPKGi Manager"
+__version__     = "5.11"
+__author__      = "RastaFairy (Python Edition)"
+__original__    = "Bucanero (PSP), ItsJokerZz (PS4/PS5)"
+__license__     = "MIT"
+__repository__  = "https://github.com/RastaFairy/FPKGi-for-PY"
 
 import tkinter as tk
 from tkinter import ttk, filedialog, messagebox
