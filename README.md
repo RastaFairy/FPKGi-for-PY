@@ -693,4 +693,23 @@ R: Parcialmente — solo el idioma actual se recuerda (requiere código adiciona
 
 ---
 
+## 🙏 Créditos e historia del proyecto
+
+### Orígenes
+Este proyecto es parte de una evolución multigeneracional de herramientas para gestionar juegos en dispositivos PlayStation:
+
+- **Concepto original (2010s):** Bucanero - Creó el homebrew original PKGi para PSP, estableciendo la filosofía central de gestión unificada de catálogos de juegos.
+- **Port a PS4/PS5 (2020s):** ItsJokerZz - Adaptó el concepto a consolas PlayStation modernas, llevando FPKGi a PS4 y PS5.
+- **Edición multiplatforma en Python (2026):** -Porté la filosofía a Python, creando una aplicación de escritorio multiplataforma con características modernas como integración de Playwright, soporte multilingüe, y scraping de OrbisPatches.
+
+### Filosofía
+La idea central se mantiene consistente en todas las versiones: *una interfaz unificada e intuitiva para gestionar paquetes de juegos en PS4, facilitando a los usuarios organizar, verificar y descargar sus colecciones de juegos.*
+
+### Agradecimientos
+- Gracias a las comunidades de modding de PSP, PS4 y PS5
+- OrbisPatches.com por proporcionar libremente información accesible sobre parches
+- Todos los contribuidores y usuarios que reportan issues y sugieren mejoras
+
+---
+
 **Creado con ❤️ para la comunidad PS4**
