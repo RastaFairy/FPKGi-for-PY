@@ -1,6 +1,10 @@
 MIT License
 
-Copyright (c) 2026 FPKGi Manager Contributors
+Copyright (c) 2026 RastaFairy & FPKGi Manager Contributors
+
+Original concept and design by Bucanero (PSP Homebrew FPKGi Manager)
+PS4/PS5 port by ItsJokerZz
+Python adaptation, evolution and multiplatform support by RastaFairy
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
