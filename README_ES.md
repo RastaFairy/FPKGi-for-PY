@@ -712,4 +712,10 @@ La idea central se mantiene consistente en todas las versiones: *una interfaz un
 
 ---
 
+[![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![GitHub Release](https://img.shields.io/github/release/RastaFairy/FPKGi-for-PY.svg)](https://github.com/RastaFairy/FPKGi-for-PY/releases)
+[![Python 3.8+](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python)](https://www.python.org/downloads/)
+[![GitHub Issues](https://img.shields.io/github/issues/RastaFairy/FPKGi-for-PY)](https://github.com/RastaFairy/FPKGi-for-PY/issues)
+[![GitHub Stars](https://img.shields.io/github/stars/RastaFairy/FPKGi-for-PY)](https://github.com/RastaFairy/FPKGi-for-PY/stargazers)
+
 **Creado con ❤️ para la comunidad PS4**
