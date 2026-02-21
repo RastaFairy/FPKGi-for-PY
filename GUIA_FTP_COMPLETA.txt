@@ -1,0 +1,341 @@
+════════════════════════════════════════════════════════════════
+  FPKGi MANAGER v5.11-FTP - GUÍA DE CONFIGURACIÓN FTP
+════════════════════════════════════════════════════════════════
+
+¡NUEVA FUNCIONALIDAD! Ahora puedes enviar PKGs directamente a tu PS4
+via FTP sin guardarlos en tu PC primero. 🚀
+
+════════════════════════════════════════════════════════════════
+  📋 REQUISITOS PREVIOS
+════════════════════════════════════════════════════════════════
+
+1. PS4 con servidor FTP corriendo:
+   • GoldHEN FTP Server
+   • PS4FTP Homebrew
+   • Cualquier servidor FTP en puerto 2121
+
+2. PS4 y PC en la misma red local
+
+3. Conocer la IP de tu PS4:
+   • Ajustes → Red → Ver estado de conexión
+   • Ejemplo: 192.168.1.210
+
+════════════════════════════════════════════════════════════════
+  ⚙️ CONFIGURACIÓN INICIAL
+════════════════════════════════════════════════════════════════
+
+PASO 1: ABRIR CONFIGURACIÓN FTP
+--------------------------------
+1. Ejecuta FPKGi Manager
+2. Ve al menú: "Descargas"
+3. Click en "⚙️ FTP Deshabilitado"
+4. Se abrirá la ventana de configuración
+
+PASO 2: CONFIGURAR DATOS FTP
+-----------------------------
+En la ventana de configuración:
+
+┌────────────────────────────────────────────────────────────┐
+│ ✓ Habilitar descarga directa a FTP  [✓]                  │
+│                                                            │
+│ 🖥️  IP / Host:          [192.168.1.210                  ]│
+│ 🔌  Puerto:              [2121                           ]│
+│ 👤  Usuario:             [anonymous                      ]│
+│ 🔐  Contraseña:          [                               ]│
+│ 📁  Directorio remoto:   [/data/pkg                      ]│
+│                                                            │
+│ [✓] Usar modo pasivo (recomendado)                        │
+│                                                            │
+│ [🔍 Probar conexión FTP]                                  │
+└────────────────────────────────────────────────────────────┘
+
+VALORES TÍPICOS:
+┌─────────────────────┬────────────────────────────────────┐
+│ Campo               │ Valor Común                        │
+├─────────────────────┼────────────────────────────────────┤
+│ IP / Host           │ 192.168.1.210 (IP de tu PS4)     │
+│ Puerto              │ 2121 (puerto estándar FTP PS4)    │
+│ Usuario             │ anonymous (sin autenticación)     │
+│ Contraseña          │ (vacío, dejar en blanco)          │
+│ Directorio remoto   │ /data/pkg (recomendado)           │
+│ Modo pasivo         │ ✓ Habilitado (recomendado)        │
+└─────────────────────┴────────────────────────────────────┘
+
+PASO 3: PROBAR CONEXIÓN
+------------------------
+1. Click en "🔍 Probar conexión FTP"
+2. Resultados posibles:
+
+   ✅ Conexión OK
+   → Todo perfecto, listo para usar
+
+   ⚠️ Conectado (dir no existe)
+   → Conexión OK pero /data/pkg no existe
+   → Se creará automáticamente al descargar
+
+   ❌ Error: Connection refused
+   → Verifica que el servidor FTP esté corriendo en PS4
+   → Verifica la IP y puerto
+
+PASO 4: GUARDAR
+----------------
+1. Click en "💾 Guardar y cerrar"
+2. Verás confirmación:
+   ✅ Configuración FTP guardada correctamente.
+   
+   Estado: ✅ HABILITADO
+   Destino: 192.168.1.210:2121/data/pkg
+
+3. El menú ahora mostrará:
+   "⚙️ ✓ FTP Habilitado"
+
+════════════════════════════════════════════════════════════════
+  🎮 USO NORMAL
+════════════════════════════════════════════════════════════════
+
+DESCARGAR JUEGO CON FTP HABILITADO:
+------------------------------------
+1. Busca y selecciona un juego en la lista
+2. Click en botón "⬇️  Descargar"
+3. En el gestor de descargas verás:
+
+   ┌──────────────────────────────────────────────────────┐
+   │ 🎮  The Last of Us Remastered v01.11                │
+   │ 🌐 FTP: 192.168.1.210:2121/data/pkg                 │
+   │ [▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░] 52%                          │
+   │ 1.85 GB / 3.52 GB  ·  15.2 MB/s                      │
+   └──────────────────────────────────────────────────────┘
+
+4. El PKG se envía directamente a tu PS4
+5. ¡NO se guarda en tu PC!
+6. Instalación directa desde /data/pkg
+
+VENTAJAS DEL MODO FTP:
+----------------------
+✅ No ocupa espacio en tu PC
+✅ No necesitas transferir después
+✅ Instalación inmediata en PS4
+✅ Ahorro de tiempo (sin paso intermedio)
+
+════════════════════════════════════════════════════════════════
+  🔄 CAMBIAR ENTRE FTP Y LOCAL
+════════════════════════════════════════════════════════════════
+
+DESACTIVAR FTP (VOLVER A LOCAL):
+---------------------------------
+1. Menú → Descargas → ⚙️ FTP Habilitado
+2. Desmarca: "✓ Habilitar descarga directa a FTP"
+3. Guardar
+
+Ahora las descargas serán locales:
+   📁 ./descargas/CUSA00554/game.pkg
+
+ACTIVAR FTP DE NUEVO:
+----------------------
+1. Menú → Descargas → ⚙️ FTP Deshabilitado
+2. Marca: "✓ Habilitar descarga directa a FTP"
+3. Guardar
+
+════════════════════════════════════════════════════════════════
+  🛠️ CONFIGURACIÓN AVANZADA
+════════════════════════════════════════════════════════════════
+
+DIRECTORIOS REMOTOS ALTERNATIVOS:
+----------------------------------
+Puedes usar otros directorios:
+
+/data/pkg              → Recomendado (ruta estándar)
+/user/data/pkg         → Alternativa
+/mnt/usb0/pkg          → Si tienes USB externo
+/system_ex/app/pkg     → Sistema extendido
+
+MODO PASIVO vs ACTIVO:
+-----------------------
+Modo Pasivo (recomendado):
+✓ Funciona mejor con routers/NAT
+✓ No requiere configuración de firewall
+✓ Compatible con mayoría de servidores FTP
+
+Modo Activo:
+○ Puede requerir abrir puertos
+○ Usar solo si el pasivo no funciona
+
+TIMEOUT DE CONEXIÓN:
+--------------------
+Por defecto: 30 segundos
+Editable en ftp_config.json:
+"timeout": 60
+
+════════════════════════════════════════════════════════════════
+  📁 ARCHIVO DE CONFIGURACIÓN
+════════════════════════════════════════════════════════════════
+
+UBICACIÓN:
+----------
+./ftp_config.json (en la carpeta del programa)
+
+ESTRUCTURA:
+-----------
+{
+  "enabled": true,
+  "host": "192.168.1.210",
+  "port": 2121,
+  "user": "anonymous",
+  "password": "",
+  "remote_path": "/data/pkg",
+  "passive_mode": true,
+  "timeout": 30
+}
+
+EDICIÓN MANUAL:
+---------------
+Puedes editar este archivo con un editor de texto
+para cambiar la configuración sin abrir el programa.
+
+════════════════════════════════════════════════════════════════
+  🐛 SOLUCIÓN DE PROBLEMAS
+════════════════════════════════════════════════════════════════
+
+PROBLEMA: "Connection refused"
+-------------------------------
+Causas:
+• Servidor FTP no está corriendo en PS4
+• IP incorrecta
+• Puerto incorrecto
+
+Soluciones:
+1. Verifica que el servidor FTP esté activo en PS4
+2. Confirma la IP: Ajustes → Red → Ver estado
+3. Verifica el puerto (normalmente 2121)
+4. Prueba hacer ping: ping 192.168.1.210
+
+PROBLEMA: "Connection timeout"
+-------------------------------
+Causas:
+• PS4 y PC en redes diferentes
+• Firewall bloqueando
+• Router bloqueando
+
+Soluciones:
+1. Asegúrate de estar en la misma red
+2. Desactiva firewall temporalmente
+3. Aumenta el timeout en ftp_config.json
+
+PROBLEMA: "Permission denied"
+------------------------------
+Causas:
+• Usuario/contraseña incorrectos
+• Directorio sin permisos de escritura
+
+Soluciones:
+1. Usa "anonymous" como usuario
+2. Deja la contraseña vacía
+3. Prueba otro directorio: /user/data/pkg
+
+PROBLEMA: "Directory not found"
+--------------------------------
+No es problema:
+• El directorio se creará automáticamente
+• Si persiste, créalo manualmente en PS4
+
+PROBLEMA: Descarga lenta
+-------------------------
+Causas:
+• Red WiFi lenta
+• Interferencias
+
+Soluciones:
+1. Usa cable Ethernet (PC y PS4)
+2. Acércate al router (si WiFi)
+3. Cierra otras descargas/streams
+
+════════════════════════════════════════════════════════════════
+  💡 CONSEJOS Y MEJORES PRÁCTICAS
+════════════════════════════════════════════════════════════════
+
+1. USA CABLE ETHERNET:
+   • Velocidad más estable
+   • Menos errores de transferencia
+   • Especialmente para juegos grandes (40+ GB)
+
+2. VERIFICA ESPACIO EN PS4:
+   • Asegúrate de tener espacio suficiente
+   • /data/pkg es el disco interno
+
+3. NO APAGUES LA PS4 DURANTE DESCARGA:
+   • La transferencia se interrumpirá
+   • El archivo quedará incompleto
+
+4. MANTÉN EL PROGRAMA ABIERTO:
+   • No cierres FPKGi Manager durante descarga
+   • Puedes minimizar la ventana
+
+5. PRUEBA PRIMERO CON UN JUEGO PEQUEÑO:
+   • Verifica que todo funciona bien
+   • Luego descarga juegos grandes
+
+════════════════════════════════════════════════════════════════
+  📊 COMPARATIVA: LOCAL vs FTP
+════════════════════════════════════════════════════════════════
+
+┌────────────────────┬──────────────────┬──────────────────┐
+│ Aspecto            │ Descarga LOCAL   │ Descarga FTP    │
+├────────────────────┼──────────────────┼──────────────────┤
+│ Espacio en PC      │ ❌ Requiere       │ ✅ No requiere   │
+│ Transferencia      │ ❌ Doble          │ ✅ Directa       │
+│ Tiempo total       │ ❌ Más lento      │ ✅ Más rápido    │
+│ Pasos              │ ❌ 3 pasos        │ ✅ 1 paso        │
+│ Configuración      │ ✅ Ninguna        │ ⚠️  Inicial      │
+│ Portabilidad       │ ✅ USB/otros      │ ❌ Solo red      │
+│ Instalación        │ ❌ Manual         │ ✅ Inmediata     │
+└────────────────────┴──────────────────┴──────────────────┘
+
+FLUJO LOCAL (TRADICIONAL):
+1. Descargar PKG a PC (30 min)
+2. Copiar a USB (15 min)
+3. Conectar USB a PS4
+4. Instalar desde USB (10 min)
+TOTAL: 55 minutos
+
+FLUJO FTP (NUEVO):
+1. Enviar directamente a PS4 via FTP (30 min)
+2. Instalar desde /data/pkg (10 min)
+TOTAL: 40 minutos
+¡AHORRO: 15 minutos!
+
+════════════════════════════════════════════════════════════════
+  🎯 CASOS DE USO
+════════════════════════════════════════════════════════════════
+
+USA FTP CUANDO:
+---------------
+✅ Tu PC tiene poco espacio libre
+✅ Quieres instalar inmediatamente
+✅ PC y PS4 están en la misma red
+✅ Tienes conexión Ethernet estable
+✅ Descargas varios juegos seguidos
+
+USA LOCAL CUANDO:
+-----------------
+✅ Quieres guardar el PKG para después
+✅ Vas a llevarlo a otra PS4
+✅ No tienes PS4 conectada ahora
+✅ Prefieres control total del archivo
+✅ Conexión de red inestable
+
+════════════════════════════════════════════════════════════════
+  📞 SOPORTE Y AYUDA
+════════════════════════════════════════════════════════════════
+
+Si tienes problemas:
+1. Revisa esta guía completa
+2. Verifica tu configuración de red
+3. Prueba con un juego pequeño primero
+4. Consulta los logs de tu servidor FTP
+5. Revisa ftp_config.json
+
+Configuración exitosa = ✅ Conexión OK al probar
+
+════════════════════════════════════════════════════════════════
+              ¡Disfruta de la descarga directa! 🎮
+════════════════════════════════════════════════════════════════

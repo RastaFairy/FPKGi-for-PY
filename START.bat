@@ -3,7 +3,7 @@ title FPKGi Manager - Windows
 color 0B
 
 echo ==========================================
-echo    FPKGI MANAGER FOR WINDOWS
+echo    FPKGI for PY
 echo ==========================================
 echo.
 
@@ -19,6 +19,4 @@ pip install -r requirements.txt >nul 2>&1
 
 echo [*] Iniciando FPKGi Manager...
 echo.
-python fpkgi_manager.py
-
-pause
+python fpkgi_manager_with_ftp.py
