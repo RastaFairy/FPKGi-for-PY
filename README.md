@@ -1,52 +1,96 @@
-# FPKGi for PY
+<div align="center">
 
-## Overview
-FPKGi for PY is a comprehensive library designed to facilitate complex interactions with Fast Programming Kit Generators (FPKGi). This library is tailored to work seamlessly with Python and provide developers with straightforward access to powerful features.
+# 🎮 FPKGi Manager
 
-## Version 5.11 - FTP Documentation
-### Features
-- **Full FTP Support**: Manage your FTP connections with ease. This includes uploading, downloading, and file management within FTP servers.
-- **Simple API**: Designed to be easy to integrate into existing applications with minimal setup required.
-- **Asynchronous Support**: The library is built to handle asynchronous operations that enhance performance and responsiveness.
+**PS4 FPKG Game Manager with OrbisPatches integration**
 
-### Installation
-You can install the package using pip:
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python&logoColor=white)
+![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux%20%7C%20macOS-lightgrey)
+![License](https://img.shields.io/badge/License-MIT-green)
+![Version](https://img.shields.io/badge/Version-5.11-orange)
+![Status](https://img.shields.io/badge/Status-Actively%20Maintained-brightgreen)
+
+</div>
+
+---
+
+## 📋 Table of Contents
+
+- [✨ Key Features](#key-features)
+- [🚀 Quick Start](#quick-start)
+- [📦 Requirements & Installation](#requirements--installation)
+- [📁 Project Structure](#project-structure)
+- [🎯 Usage Guide](#usage-guide)
+- [🔧 Configuration](#configuration)
+- [🌍 Supported Languages](#supported-languages)
+- [🔎 OrbisPatches Patch System](#orbispatches-patch-system)
+- [⬇️ Downloads & Manager](#downloads--manager)
+- [🌐 Cloudflare Handling](#cloudflare-handling)
+- [📝 Changelog](#changelog)
+- [⚠️ Disclaimer](#disclaimer)
+
+---
+
+## ✨ Key Features
+
+### 🎛️ Game Management
+- **Dual JSON support** — Compatible with two formats:
+  - `FPKGi` format (`DATA` dictionary)
+  - `PS4PKGInstaller` format (`packages` list)
+- **Visual catalog** — Interactive table with covers, title, version & status
+- **Real-time search** — Filter by name, TITLE_ID or region
+- **Sorting** — Click any column header to sort
+
+### 🔄 OrbisPatches Integration
+- **Advanced scraper** — Pulls metadata directly from orbispatches.com:
+  - Patch version
+  - Required firmware
+  - File size
+  - Creation date
+  - Patch notes
+- **Chromium rendering** — Executes JavaScript to bypass Cloudflare
+- **Automatic fallback** — Uses plain `requests` if Playwright is unavailable
+- **Compatibility indicator** — Shows 🟢 (compatible) or 🔴 (incompatible) based on your FW
+
+### ✅ Availability Checking
+- **HTTP verification** — Confirms download URLs are live
+- **Session cache** — Stores results to avoid repeated checks
+- **Visual indicators** — Real-time status (AVAILABLE / UNAVAILABLE / NOT CHECKED)
+
+### ⬇️ Download Manager
+- **Parallel downloads** — Multiple files at once
+- **Progress bars** — Real-time per-file progress
+- **Custom path** — Change download folder per session
+- **Floating manager** — Independent window to monitor downloads
+- **Organized storage** — Files saved to `./download/{TITLE_ID}/`
+
+### 🎨 Multilingual Interface
+- **8+ languages** — Loaded dynamically from `lang/*.json`
+  - 🇬🇧 English · 🇪🇸 Español · 🇮🇹 Italiano · 🇩🇪 Deutsch · 🇫🇷 Français
+  - 🇷🇺 Русский · 🇨🇳 中文 · 🇰🇷 한국어 · 🇯🇵 日本語
+- **Automatic fallback** — Missing keys fall back to English
+- **Live language switching** — UI updates without restart
+
+### 🖼️ Icon Caching
+- **Parallel preloading** — Downloads all covers automatically
+- **Progress bar** — Shows caching progress
+- **Persistent cache** — Icons saved locally in `icons_cache/`
+- **Manual cleanup** — Clear cache from menu
+
+### 🌐 Patch Notes Translation
+- **Automatic translation** — Converts patch notes to selected language
+- **Claude API** — Uses Anthropic for high-quality translation
+- **Translation cache** — Stores results for fast access
+- **Graceful fallback** — Shows original text if translation fails
+
+---
+
+## 🚀 Quick Start
+
+### Minimal install (no Playwright)
 ```bash
-pip install fpkgi
-```
+git clone https://github.com/RastaFairy/FPKGi-for-PY.git
+cd FPKGi-for-PY
 
-### Usage
-Here’s a quick example to get you started:
-```python
-import fpkgi
-
-# Establish FTP connection
-ftp = fpkgi.FTPConnection(host='ftp.example.com', username='user', password='pass')
-
-# Upload a filetp.upload('/path/to/local/file.txt', '/path/on/server/file.txt')
-
-# Download a file
-ftp.download('/path/on/server/file.txt', '/path/to/local/file.txt')
-
-# List files in a directory
-files = ftp.list_directory('/path/on/server/')
-print(files)
-```
-
-### Additional Configuration
-- **Timeout Settings**: You can adjust the timeout settings during the FTP connection setup to avoid hanging connections.
-
-### Error Handling
-Be sure to handle potential errors when managing files over FTP. The library provides clear exception handling to assist developers in troubleshooting potential issues.
-
-### Contributing
-If you are interested in contributing to this project, please fork the repository and submit a pull request. We welcome community contributions.
-
-### License
-FPKGi for PY is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-### Support
-For queries, feel free to open an issue on the GitHub repository or contact support at [support@example.com](mailto:support@example.com).
-
-### Acknowledgments
-Special thanks to the contributors and the community for their continuous support and feedback.
+pip install Pillow requests
+python fpkgi_manager.py
