@@ -158,7 +158,7 @@ Output: `dist/FPKGiManager/`
 | Role | Name |
 |------|------|
 | Original concept (PSP Homebrew) | [Bucanero](https://github.com/bucanero) |
-| PS4 / PS5 port | ItsJokerZz |
+| PS4 / PS5 port | ItsJokerZz | [ItsJokerZz](https://github.com/ItsJokerZz) |
 | Python adaptation & evolution | RastaFairy |
 
 ---
