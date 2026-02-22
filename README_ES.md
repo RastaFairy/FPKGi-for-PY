@@ -158,8 +158,10 @@ Resultado: `dist/FPKGiManager/`
 | Rol | Nombre |
 |-----|--------|
 | Concepto original (PSP Homebrew) | [Bucanero](https://github.com/bucanero) |
-| Puerto PS4 / PS5 | ItsJokerZz |
+| Puerto PS4 / PS5 | ItsJokerZz | [ItsJokerZz](https://github.com/ItsJokerZz) |
 | Adaptación y evolución en Python | RastaFairy |
+
+
 
 ---
 
